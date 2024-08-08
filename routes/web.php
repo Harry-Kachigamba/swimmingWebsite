@@ -34,6 +34,9 @@ use App\Http\Controllers\SiteController;
 //Place Controller
 use App\Http\Controllers\PlaceController;
 
+//Search Controller
+use App\Http\Controllers\SearchController;
+
 //Home File Location
 //Index is the function to be used in the controller file.
 Route::get('/', [HomeController::class, 'index']);
@@ -75,3 +78,8 @@ Route::post('/sites', [SiteController::class, 'store'])->name('sites.store');
 //Places is the function to be used in the file controller file
 Route::get('/places', [PlaceController::class, 'create'])->name('places.create');
 Route::post('/places', [PlaceController::class, 'store']);
+
+
+//Search File Location
+//Index is the function to be used in the file controller file
+Route::get('/search', [SearchController::class, 'search'])->name('search');
