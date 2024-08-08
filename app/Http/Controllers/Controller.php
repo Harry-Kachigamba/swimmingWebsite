@@ -9,4 +9,8 @@ abstract class Controller
     {
         return view('home');
     }
+
+    public function category() {
+        return view('categories');
+    }
 }

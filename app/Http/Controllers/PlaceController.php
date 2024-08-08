@@ -7,11 +7,11 @@ use App\Models\Place;
 
 class PlaceController extends Controller
 {
-    public function createPlace() {
-        return view('palces.create');
+    public function create() {
+        return view('places.create');
     }
 
-    public function store() {
+    public function store(Request $request) {
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
